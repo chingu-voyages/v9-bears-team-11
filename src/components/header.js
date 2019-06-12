@@ -1,27 +1,28 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
-import Background from '../images/adi-goldstein-796588-unsplash.jpg';
 
 const Header = ({ siteTitle }) => (
   <header
     style={{
-      backgroundImage: `url(${Background})`,
-      marginBottom: `1.45rem`,
+      margin: `0 auto`,
+      backgroundImage: `url(https://source.unsplash.com/featured?audio)`,
+      backgroundRepeat: `no-repeat`,
+      marginBottom: `3rem`,
     }}
   >
     <div
       style={{
-        margin: `0 auto`,
+        margin: `0`,
         maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
+        padding: `10rem 5rem`,
       }}
     >
       <h1 style={{ margin: 0 }}>
         <Link
           to="/"
           style={{
-            color: `orange`,
+            color: `white`,
             textDecoration: `none`,
           }}
         >
