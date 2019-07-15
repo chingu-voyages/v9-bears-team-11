@@ -1,5 +1,5 @@
 # v9-bears-team-11
-Piano Synth Audio Generator using Tone.js | Voyage-9 | https://chingu.io/
+Synth Audio Generator using Tone.js | Voyage-9 | https://chingu.io/
 
 ## User stories
 1. User can click on piano keys to play notes
