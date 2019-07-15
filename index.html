@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>pianoNewLatest</title>
+  
+  
+  
+      <link rel="stylesheet" href="./style.css">
+
+  
+</head>
+
+<body>
+
+  <div id="piano">
+  <div class="menu">
+  <div class="button-group" id="buttons">
+  <button class="btn activeBtn" id="sine">Sine</button>
+  <button class="btn" id="square">Square</button>
+  <button class="btn" id="triangle">Triangle</button>
+  <button class="btn" id="sawtooth">Sawtooth</button>
+</div>
+
+  </div>
+  <ul id="pianoKeys">
+  <li data-note="A3" class="key mouse" id="a">
+    <div data-note="A#3" class="black-key mouse" id="w">W</div>
+    A
+  </li>
+  <li data-note="B3" class="key mouse" id="s">
+    S
+  </li>
+  <li data-note="C4" class="key mouse" id="d">
+    <div data-note="C#4" class="black-key mouse" id="r">R</div>
+    D
+  </li>
+  <li data-note="D4" class="key mouse" id="f">
+    <div data-note="D#4" class="black-key mouse" id="t">T</div>
+    F
+  </li>
+  <li data-note="E4" class="key mouse" id="g">
+    G
+  </li>
+  <li data-note="F4" class="key mouse" id="h">
+    <div data-note="F#4" class="black-key mouse" id="u">U</div>
+    H
+  </li>
+  <li data-note="G4" class="key mouse" id="j">
+    <div data-note="G#4" class="black-key mouse" id="i">I</div>
+    J
+  </li>
+  <li data-note="A4" class="key mouse" id="k">
+    <div data-note="A#4" class="black-key mouse" id="o">O</div>
+    K
+  </li>
+  <li data-note="B4" class="key mouse" id="l">
+    L
+  </li>
+  <li data-note="C5" class="key mouse" id=";">
+    <div data-note="C#5" class="black-key mouse" id="[">[</div>
+    ;
+  </li>
+  <li data-note="D5" class="key mouse" id="'">
+    '
+  </li>
+</ul>
+</div>
+
+
+
+<div class="output">
+<label class="record">Record Output</label>
+<input id="trigger-record" type="checkbox" checked>
+<div class="record-output">
+  <h3>Audio Output:</h3>
+  <input type="button" value="Clear" onclick="javascript:eraseText();">
+  <pre>
+    <code class="language-js" id="gen-output">
+   
+    </code>    
+  </pre>
+
+</div>  
+</div>
+  <script src='https://unpkg.com/tone@latest/build/Tone.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/prism/1.16.0/prism.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+
+  
+
+    <script  src="./script.js"></script>
+
+
+
+
+</body>
+
+</html>
