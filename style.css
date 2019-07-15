@@ -1,0 +1,264 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+#piano {
+  display: inline-block;
+  margin-top: 10vh;
+  margin-bottom: 5vh;
+}
+
+.menu {
+  background-color: black;
+  width: 100%;
+  height: 100px;
+  border-radius: 10px;
+}
+.menu .button-group {
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+}
+.menu .button-group .btn {
+  background: black;
+  border: 1px solid #FFFFF0;
+  border-radius: 10px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-right: 20px;
+  outline: none;
+  cursor: pointer;
+}
+.menu .button-group .btn.activeBtn {
+  color: green;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  text-align: center;
+  user-select: none;
+}
+ul li {
+  position: relative;
+  width: 60px;
+  height: 180px;
+  border: 1px solid black;
+  border-right: none;
+  background: #fffff0;
+  border-radius: 5px;
+  box-shadow: 0px 3px 5px #666;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 10px;
+  font-weight: bold;
+  font-size: 18px;
+}
+ul li:last-child {
+  border-right: 1px solid black;
+}
+ul li span {
+  font-size: 13px;
+}
+ul .black-key {
+  position: absolute;
+  top: -1px;
+  left: 37.5px;
+  width: 45px;
+  height: 120px;
+  background: black;
+  border-radius: 5px;
+  box-shadow: 0px 3px 5px #666;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 10px;
+  color: white;
+}
+ul .active {
+  box-shadow: 0px 1px 3px #666;
+}
+
+.output {
+  text-align: center;
+  width: 600px;
+}
+
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #c5c8c6;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+  font-family: Inconsolata, Monaco, Consolas, 'Courier New', Courier, monospace;
+  height: auto;
+  max-height: 600px;
+  max-width: 600px;
+  margin: 0 !important;
+  direction: ltr;
+  text-align: left;
+  word-spacing: normal;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  /* css-3 */
+  white-space: -moz-pre-wrap;
+  /* Mozilla, since 1999 */
+  white-space: -pre-wrap;
+  /* Opera 4-6 */
+  white-space: -o-pre-wrap;
+  /* Opera 7 */
+  word-wrap: break-word;
+  /* Internet Explorer 5.5+ */
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: 1em;
+  margin: .5em 0;
+  overflow: auto;
+  border-radius: 0.3em;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+  background: #1d1f21;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: #7C7C7C;
+}
+
+.token.punctuation {
+  color: #c5c8c6;
+}
+
+.namespace {
+  opacity: .7;
+}
+
+.token.property,
+.token.keyword,
+.token.tag {
+  color: #96CBFE;
+}
+
+.token.class-name {
+  color: #FFFFB6;
+  text-decoration: underline;
+}
+
+.token.boolean,
+.token.constant {
+  color: #99CC99;
+}
+
+.token.symbol,
+.token.deleted {
+  color: #f92672;
+}
+
+.token.number {
+  color: #FF73FD;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+  color: #A8FF60;
+}
+
+.token.variable {
+  color: #C6C5FE;
+}
+
+.token.operator {
+  color: #EDEDED;
+}
+
+.token.entity {
+  color: #FFFFB6;
+  /* text-decoration: underline; */
+}
+
+.token.url {
+  color: #96CBFE;
+}
+
+.language-css .token.string,
+.style .token.string {
+  color: #87C38A;
+}
+
+.token.atrule,
+.token.attr-value {
+  color: #F9EE98;
+}
+
+.token.function {
+  color: #DAD085;
+}
+
+.token.regex {
+  color: #E9C062;
+}
+
+.token.important {
+  color: #fd971f;
+}
+
+.token.important,
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+/** ------------------------------------------------------------------------- **/
+.record-output {
+  display: none;
+}
+
+#trigger-record:checked + .record-output {
+  display: block;
+}
